@@ -61,3 +61,11 @@ header{
     color: #fff;
     transition: 0.3s;
 }
+
+#res_conjunto, #res_card, #res_partes{
+    font-size: 40px;
+}
+
+#res_partes{
+    font-size: 30px;
+}

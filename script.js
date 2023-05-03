@@ -31,45 +31,28 @@ function saveConj() {
   }
 
   var partes = conjuntoDasPartes(all_elem);
-  partes.sort(function(a,b){
-      return a.length - b.length
-  })
+  partes.sort(function (a, b) {
+    return a.length - b.length;
+  });
   console.log(partes);
-  var lps = JSON.stringify(partes)
+  reps = partes.length;
+  partes[0] = "Ø";
+  partes[reps - 1] = nome_conjunto;
+  var lps = JSON.stringify(partes);
 
+  lps = lps.replaceAll("[", "{");
+  lps = lps.replaceAll("]", "}");
+  lps = lps.replaceAll('"', "");
 
-  lps = lps.replace('[', "{")
-  lps = lps.replace(']', "}")
+  console.log(lps);
+  alert(lps);
+  
+  document.getElementById('calculos').style.display = "none"
+  document.getElementById('resul').style.display="block"
 
-  console.log(lps)
-  // partes = partes.replace("[", "{")
-  alert(lps)
-  // var todas_partes = []
+  document.getElementById('res_conjunto').innerHTML = conjunto
+  document.getElementById('res_card').innerHTML = "#" + nome_conjunto + " = " + num_partes
+  document.getElementById('res_partes').innerHTML = "P("+nome_conjunto+") = " + lps
 
-  // for(var y = 0; y <= all_elem.length; y++){
-  //   todas_partes.push([])
-  // }
-
-  // for (var x = 0; x < all_elem.length; x++) {
-
-  //   for(var j = 0; j < partes.length; j++){
-  //       if (partes[j].length == 0) {
-  //           todas_partes[0].push(partes[j])
-  //       }
-  //       if (partes[j].length == 1) {
-  //           todas_partes[1].push(partes[j])
-  //       }
-  //       if (partes[j].length == 2) {
-  //           todas_partes[2].push(partes[j])
-  //       }
-  //       if (partes[j].length == 3) {
-  //           todas_partes[3].push(partes[j])
-  //       }
-  //   }
-
-  // }
-
-  // console.log(todas_partes)
-  // alert(partes[3].toString());
 
 }

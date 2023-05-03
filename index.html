@@ -9,17 +9,37 @@
     <title>Partes</title>
 </head>
 <body>
-    <header>PARTES DO CONJUNTO</header>
-    <div class="conjunto">
-        <span class="texto_conj">Digite a letra do conjunto</span>
-        <input type="text" name="input_conj" id="input_conj" maxlength="1">
+    <header>CONJUNTO DAS PARTES</header>
+    <div class="calculos" id="calculos" style="display: block;">
+        <div class="conjunto">
+            <span class="texto_conj">Digite a letra do conjunto</span>
+            <input type="text" name="input_conj" id="input_conj" maxlength="1">
+        </div>
+    
+        <div class="partes">
+            <span class="texto_part">Digite os elementos do conjunto</span>
+            <input type="text" name="input_part" id="input_part">
+        </div>
+    
+        <button type="button" id="btn_res" onclick="saveConj()">Resultados</button>
     </div>
 
-    <div class="partes">
-        <span class="texto_part">Digite os elementos do conjunto</span>
-        <input type="text" name="input_part" id="input_part">
+    <div class="resul" id="resul" style="display: none;">
+        <div class="conjunto">
+            <span class="texto_conj">Conjunto</span>
+            <span id="res_conjunto">TESTE</span>
+        </div>
+    
+        <div class="partes">
+            <span class="texto_part">Cardinalidade</span>
+            <span id="res_card">TESTE2</span>
+        </div>
+
+        <div class="partes">
+            <span class="texto_part">Conjunto das Partes</span>
+            <span id="res_partes">TESTE3</span>
+        </div>
     </div>
 
-    <button type="button" id="btn_res" onclick="saveConj()">Resultados</button>
 </body>
 </html>
