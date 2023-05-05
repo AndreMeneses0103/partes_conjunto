@@ -1,6 +1,7 @@
 function saveConj() {
-  var nome_conjunto = document.getElementById("input_conj").value;
+  var nome_conjunto = (document.getElementById("input_conj").value).toUpperCase();
   var elementos = document.getElementById("input_part").value;
+  elementos = elementos.replaceAll(";",",")
   var all_elem = elementos.split(",");
 
   var conjunto = nome_conjunto + " = {" + all_elem + "}";
@@ -55,4 +56,9 @@ function saveConj() {
   document.getElementById('res_partes').innerHTML = "P("+nome_conjunto+") = " + lps
 
 
+}
+
+function voltar(){
+  document.getElementById('calculos').style.display = "block"
+  document.getElementById('resul').style.display="none"
 }
