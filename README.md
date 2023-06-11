@@ -12,7 +12,7 @@ O software, construido em Javascript, realiza o conjunto das partes de um conjun
 
 ## Screenshots
 
-![image](https://github.com/AndreMeneses0103/partes_conjunto/assets/89109574/97e47f02-d874-431c-ae7d-f81c6c073fc8)
+![image](https://github.com/AndreMeneses0103/partes_conjunto/assets/89109574/bf39759f-a86d-413d-ab61-26a45b9676af)
 
 
 ## Utilização
